@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../utils/app_constants.dart';
 import '../widgets/custom_drawer.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 String image_address =
     "https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666346763_23-mykaleidoscope-ru-p-kipelno-belii-oboi-26.jpg";
@@ -23,7 +24,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       appBar: AppBar(
         backgroundColor: AppConstants.appBarColor,
         title: Text(
-          "Sozlamalar",
+          AppLocalizations.of(context)!.settings,
           style: TextStyle(fontSize: AppConstants.textSize + 5),
         ),
         actions: [

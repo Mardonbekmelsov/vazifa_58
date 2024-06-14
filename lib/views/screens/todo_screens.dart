@@ -4,6 +4,7 @@ import '../widgets/custom_drawer.dart';
 import '../widgets/todo_add_dialog.dart';
 import '../widgets/todo_edit_dialog.dart';
 import '../widgets/todo_item.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ToDoScreen extends StatefulWidget {
   const ToDoScreen({super.key});
@@ -43,8 +44,8 @@ class _ToDoScreenState extends State<ToDoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "ToDo",
+        title: Text(
+          AppLocalizations.of(context)!.todo,
           style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,

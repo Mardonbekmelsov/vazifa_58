@@ -2,6 +2,7 @@ import 'package:dars_3_9_uy_ishi/main.dart';
 import 'package:dars_3_9_uy_ishi/services/auth_http_services.dart';
 import 'package:dars_3_9_uy_ishi/views/screens/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({
@@ -13,13 +14,13 @@ class CustomDrawer extends StatelessWidget {
     return Drawer(
       child: Column(
         children: [
-          const DrawerHeader(
+          DrawerHeader(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Text(
-                  "MENYU",
+                  AppLocalizations.of(context)!.menu,
                 ),
               ],
             ),
@@ -28,8 +29,8 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               Navigator.pushNamed(context, "/main");
             },
-            title: const Text(
-              "Bosh sahifa",
+            title: Text(
+              AppLocalizations.of(context)!.mainpage,
             ),
             trailing: const Icon(
               Icons.keyboard_arrow_right,
@@ -39,8 +40,8 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               Navigator.pushNamed(context, "/todo");
             },
-            title: const Text(
-              "ToDo",
+            title: Text(
+              AppLocalizations.of(context)!.todo,
             ),
             trailing: const Icon(
               Icons.keyboard_arrow_right,
@@ -50,8 +51,8 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               Navigator.pushNamed(context, "/note");
             },
-            title: const Text(
-              "Note",
+            title: Text(
+              AppLocalizations.of(context)!.note,
             ),
             trailing: const Icon(
               Icons.keyboard_arrow_right,
@@ -61,8 +62,8 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               Navigator.pushNamed(context, "/settings");
             },
-            title: const Text(
-              "Settings",
+            title: Text(
+              AppLocalizations.of(context)!.settings,
             ),
             trailing: const Icon(
               Icons.keyboard_arrow_right,
@@ -79,8 +80,8 @@ class CustomDrawer extends StatelessWidget {
                     builder: (context) => const LoginScreen(),
                   ));
             },
-            title: const Text(
-              "Log out",
+            title: Text(
+              AppLocalizations.of(context)!.logout,
             ),
             trailing: const Icon(
               Icons.keyboard_arrow_right,

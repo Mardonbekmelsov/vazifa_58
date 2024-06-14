@@ -2,6 +2,7 @@ import 'package:dars_3_9_uy_ishi/model/note.dart';
 import 'package:dars_3_9_uy_ishi/view_model/expenses_viewmode.dart';
 import 'package:dars_3_9_uy_ishi/views/widgets/note_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class NoteScreen extends StatefulWidget {
   const NoteScreen({super.key});
@@ -12,7 +13,7 @@ class NoteScreen extends StatefulWidget {
 
 class _NoteScreenState extends State<NoteScreen> {
   final notesViewModel = NotesViewmodel();
-  
+
   late DateTime selectedDate;
 
   @override
@@ -79,7 +80,7 @@ class _NoteScreenState extends State<NoteScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Notes"),
+        title: Text(AppLocalizations.of(context)!.note),
         actions: [
           IconButton(
             onPressed: addNote,
